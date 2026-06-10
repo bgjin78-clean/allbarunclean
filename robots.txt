@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://allbarunclean.com/sitemap.xml
