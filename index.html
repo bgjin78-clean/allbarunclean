@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>올바른수거 | 서울 경기 유품정리 · 폐기물처리 전문</title>
+  <meta name="description" content="올바른수거는 서울·경기 지역 유품정리, 고독사청소, 특수청소, 폐기물처리, 빈집정리, 가정폐기물처리, 이사폐기물처리를 전문으로 진행합니다." />
+  <meta name="keywords" content="올바른수거, 서울 유품정리, 경기 유품정리, 서울 폐기물처리, 경기 폐기물처리, 고독사청소, 특수청소, 빈집정리, 가정폐기물처리, 이사폐기물처리" />
+
+  <meta property="og:title" content="올바른수거 | 서울 경기 유품정리 · 폐기물처리 전문" />
+  <meta property="og:description" content="서울·경기 유품정리, 고독사청소, 특수청소, 폐기물처리 전문 상담." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://allbarunclean.com/" />
+  <meta property="og:image" content="https://allbarunclean.com/og-image.jpg" />
+
+  <link rel="icon" href="/favicon-allbarun.png">
+  <link rel="apple-touch-icon" href="/favicon-allbarun.png">
+
+  <style>
+    :root {
+      --main: #365a4c;
+      --sub: #61786b;
+      --point: #c2a86f;
+      --bg: #f1eee6;
+      --card: #fffaf1;
+      --text: #26362f;
+      --muted: #69786f;
+      --line: #ddd4c5;
+      --soft: #e6dfd2;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(241, 238, 230, 0.95);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--main);
+      letter-spacing: -0.8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .call-btn {
+      background: var(--main);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .hero {
+      padding: 110px 20px 92px;
+      color: #fff;
+      background:
+        linear-gradient(120deg, rgba(54, 90, 76, 0.95), rgba(97, 120, 107, 0.82)),
+        url("main-visual.jpg") center/cover no-repeat;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 15px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.28);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      margin: 0 0 22px;
+      font-size: 48px;
+      line-height: 1.22;
+      letter-spacing: -1.7px;
+    }
+
+    .hero p {
+      max-width: 740px;
+      margin: 0 0 34px;
+      font-size: 18px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 13px;
+      font-weight: 900;
+    }
+
+    .btn-primary {
+      background: var(--point);
+      color: #26362f;
+    }
+
+    .btn-outline {
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.38);
+      background: rgba(255,255,255,0.13);
+    }
+
+    section {
+      padding: 78px 20px;
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .title {
+      margin-bottom: 34px;
+    }
+
+    .title span {
+      color: var(--point);
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+    }
+
+    .title h2 {
+      margin: 8px 0 10px;
+      font-size: 34px;
+      line-height: 1.3;
+      color: var(--main);
+      letter-spacing: -1px;
+    }
+
+    .title p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+    }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 36px;
+      box-shadow: 0 12px 34px rgba(54,90,76,0.08);
+    }
+
+    .service-card small {
+      color: var(--point);
+      font-weight: 900;
+    }
+
+    .service-card h3 {
+      margin: 10px 0 14px;
+      color: var(--main);
+      font-size: 29px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      margin: 0 0 22px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 26px;
+    }
+
+    .tags span {
+      background: #e9e1d3;
+      color: #40584d;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .card-btn {
+      display: inline-block;
+      background: var(--main);
+      color: #fff;
+      padding: 13px 19px;
+      border-radius: 12px;
+      font-weight: 900;
+    }
+
+    .card-btn.sub {
+      background: var(--sub);
+    }
+
+    .why {
+      background: var(--soft);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .why-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 26px;
+    }
+
+    .why-card b {
+      display: inline-block;
+      color: var(--point);
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .why-card strong {
+      display: block;
+      color: var(--main);
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .area-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .area-card h3 {
+      color: var(--main);
+      font-size: 23px;
+      margin: 0 0 16px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .chips span {
+      background: #e9e1d3;
+      color: #40584d;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, #365a4c, #61786b);
+      color: #fff;
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      margin: 0 0 18px;
+      font-size: 36px;
+      line-height: 1.3;
+      letter-spacing: -1px;
+    }
+
+    .contact-info p {
+      color: rgba(255,255,255,0.87);
+    }
+
+    .phone-large {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 14px 20px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 14px;
+      font-size: 22px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    form {
+      background: var(--card);
+      color: var(--text);
+      border-radius: 26px;
+      padding: 30px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      margin-bottom: 14px;
+      font-size: 15px;
+      background: #fffdf8;
+      color: var(--text);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .agree {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--muted);
+      font-size: 14px;
+      margin: 4px 0 18px;
+    }
+
+    .agree input {
+      width: auto;
+      margin-top: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      background: var(--main);
+      color: #fff;
+      font-size: 17px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .faq {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+    }
+
+    .faq strong {
+      display: block;
+      color: var(--main);
+      margin-bottom: 8px;
+    }
+
+    .faq p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    footer {
+      background: #dcd4c6;
+      color: #4d5d54;
+      padding: 40px 20px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner strong {
+      color: var(--main);
+      font-size: 18px;
+    }
+
+    .floating-call {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 120;
+      background: var(--main);
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(54,90,76,0.28);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 86px 20px 78px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .service-grid,
+      .why-grid,
+      .area-grid,
+      .contact-box,
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 62px 20px;
+      }
+
+      .title h2 {
+        font-size: 28px;
+      }
+
+      .floating-call {
+        left: 18px;
+        right: 18px;
+        text-align: center;
+      }
+    }
+    .pricing {
+        background: #e6dfd2;
+        color: #26362f;
+
+      }
+
+    .pricing .title h2 {
+       color: var(--main);
+      
+      }
+
+    .pricing .title p {
+       color: var(--muted);
+    }
+
+    .price-note {
+        display: block;
+        text-align: right;
+        color: #365a4c;
+        font-size: 14px;
+        font-weight: 800;
+        margin: -8px 0 30px;
+    }
+
+    .price-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+    }
+
+    .price-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 30px;
+        box-shadow: 0 10px 24px rgba(54,90,76,0.08);
+    }
+
+    .price-card strong {
+        display: block;
+        color: var(--main);
+        margin-bottom: 14px;
+    }
+
+    .price-card .price {
+        font-size: 42px;
+        color: var(--main);
+        font-weight: 900;
+        margin-bottom: 12px;
+    }
+
+    .price-card .price span {
+        font-size: 17px;
+        color: var(--muted);
+        font-weight: 600;
+    }
+
+    .price-card p {
+        color: var(--muted);
+        margin: 0;
+    }
+
+  @media (max-width: 900px) {
+    .price-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-note {
+        text-align: left;
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a href="/" class="logo">올바른수거</a>
+
+    <nav class="nav-links">
+      <a href="#service">서비스</a>
+      <a href="#why">선택 이유</a>
+      <a href="#area">지역안내</a>
+      <a href="#contact">상담접수</a>
+      <a href="#pricing">가격안내</a>
+    </nav>
+
+    <a href="tel:01043932414" class="call-btn">010-4393-2414</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="badge">서울 · 경기 정리 전문 브랜드</div>
+      <h1>정리가 필요한 순간,<br>올바른수거가 함께합니다.</h1>
+      <p>
+        올바른수거는 서울·경기 지역을 중심으로 유품정리, 고독사청소, 특수청소와
+        폐기물처리, 빈집정리, 가정폐기물처리, 이사폐기물처리를 전문적으로 진행합니다.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://yupum.allbarunclean.com" class="btn btn-primary">유품정리 바로가기</a>
+        <a href="https://waste.allbarunclean.com" class="btn btn-outline">폐기물처리 바로가기</a>
+        <a href="#contact" class="btn btn-outline">상담 접수하기</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="service">
+    <div class="wrap">
+      <div class="title">
+        <span>SERVICE</span>
+        <h2>필요한 정리 서비스를 선택하세요</h2>
+        <p>서비스 성격에 따라 두 개의 전문 사이트로 나누어 운영합니다.</p>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-card">
+          <small>YUPUM CLEAN</small>
+          <h3>유품정리</h3>
+          <p>
+            고인의 유품을 정리하고, 고독사청소와 특수청소가 필요한 현장까지
+            상황에 맞게 신중하게 진행합니다.
+          </p>
+
+          <div class="tags">
+            <span>유품정리</span>
+            <span>고독사청소</span>
+            <span>특수청소</span>
+            <span>소독</span>
+            <span>악취 저감</span>
+          </div>
+
+          <a href="https://yupum.allbarunclean.com" class="card-btn">유품정리 사이트 이동</a>
+        </div>
+
+        <div class="service-card">
+          <small>WASTE CLEAN</small>
+          <h3>폐기물처리</h3>
+          <p>
+            생활공간, 이사 후 공간, 빈집, 가정 내 대형 폐기물 등
+            직접 처리하기 어려운 폐기물을 정리하고 반출합니다.
+          </p>
+
+          <div class="tags">
+            <span>폐기물처리</span>
+            <span>빈집정리</span>
+            <span>가정폐기물처리</span>
+            <span>이사폐기물처리</span>
+            <span>생활폐기물</span>
+          </div>
+
+          <a href="https://waste.allbarunclean.com" class="card-btn sub">폐기물처리 사이트 이동</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="wrap">
+      <div class="title">
+        <span>POINT</span>
+        <h2>왜 올바른수거를 선택할까요?</h2>
+        <p>복잡한 설명보다 필요한 내용을 빠르게 확인하고 상담받을 수 있도록 구성했습니다.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <b>01</b>
+          <strong>서울·경기 전 지역 상담</strong>
+          <p>서울 전 지역과 경기도 주요 시·군 지역까지 현장 상황에 맞춰 상담을 진행합니다.</p>
+        </div>
+
+        <div class="why-card">
+          <b>02</b>
+          <strong>분야별 전문 서비스</strong>
+          <p>유품정리와 폐기물처리를 구분해 필요한 서비스에 맞는 정확한 안내를 제공합니다.</p>
+        </div>
+
+        <div class="why-card">
+          <b>03</b>
+          <strong>빠른 상담 가능</strong>
+          <p>전화, 문자, 온라인 문의를 통해 상황을 확인하고 가능한 일정을 안내드립니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="area">
+    <div class="wrap">
+      <div class="title">
+        <span>AREA</span>
+        <h2>서울·경기 지역 상담 가능</h2>
+        <p>서울·경기 주요 지역은 유품정리 전문 페이지로 연결됩니다.</p>
+      </div>
+
+      <div class="area-grid">
+        <div class="area-card">
+          <h3>서울특별시</h3>
+          <div class="chips">
+            <a href="https://yupum.allbarunclean.com/regions/gangnam/">강남구</a>
+            <a href="https://yupum.allbarunclean.com/regions/gangdong/">강동구</a>
+            <a href="https://yupum.allbarunclean.com/regions/gangbuk/">강북구</a>
+            <a href="https://yupum.allbarunclean.com/regions/gangseo/">강서구</a>
+            <a href="https://yupum.allbarunclean.com/regions/gwanak/">관악구</a>
+            <a href="https://yupum.allbarunclean.com/regions/gwangjin/">광진구</a>
+            <a href="https://yupum.allbarunclean.com/regions/guro/">구로구</a>
+            <a href="https://yupum.allbarunclean.com/regions/geumcheon/">금천구</a>
+            <a href="https://yupum.allbarunclean.com/regions/nowon/">노원구</a>
+            <a href="https://yupum.allbarunclean.com/regions/dobong/">도봉구</a>
+            <a href="https://yupum.allbarunclean.com/regions/dongdaemun/">동대문구</a>
+            <a href="https://yupum.allbarunclean.com/regions/dongjak/">동작구</a>
+            <a href="https://yupum.allbarunclean.com/regions/mapo/">마포구</a>
+            <a href="https://yupum.allbarunclean.com/regions/seodaemun/">서대문구</a>
+            <a href="https://yupum.allbarunclean.com/regions/seocho/">서초구</a>
+            <a href="https://yupum.allbarunclean.com/regions/seongdong/">성동구</a>
+            <a href="https://yupum.allbarunclean.com/regions/seongbuk/">성북구</a>
+            <a href="https://yupum.allbarunclean.com/regions/songpa/">송파구</a>
+            <a href="https://yupum.allbarunclean.com/regions/yangcheon/">양천구</a>
+            <a href="https://yupum.allbarunclean.com/regions/yeongdeungpo/">영등포구</a>
+            <a href="https://yupum.allbarunclean.com/regions/yongsan/">용산구</a>
+            <a href="https://yupum.allbarunclean.com/regions/eunpyeong/">은평구</a>
+            <a href="https://yupum.allbarunclean.com/regions/jongno/">종로구</a>
+            <a href="https://yupum.allbarunclean.com/regions/jung/">중구</a>
+            <a href="https://yupum.allbarunclean.com/regions/jungnang/">중랑구</a>
+          </div>
+        </div>
+
+        <div class="area-card">
+          <h3>경기도</h3>
+          <div class="chips">
+            <a href="https://yupum.allbarunclean.com/regions/suwon/">수원시</a>
+            <a href="https://yupum.allbarunclean.com/regions/seongnam/">성남시</a>
+            <a href="https://yupum.allbarunclean.com/regions/goyang/">고양시</a>
+            <a href="https://yupum.allbarunclean.com/regions/yongin/">용인시</a>
+            <a href="https://yupum.allbarunclean.com/regions/bucheon/">부천시</a>
+            <a href="https://yupum.allbarunclean.com/regions/ansan/">안산시</a>
+            <a href="https://yupum.allbarunclean.com/regions/anyang/">안양시</a>
+            <a href="https://yupum.allbarunclean.com/regions/namyangju/">남양주시</a>
+            <a href="https://yupum.allbarunclean.com/regions/hwaseong/">화성시</a>
+            <a href="https://yupum.allbarunclean.com/regions/pyeongtaek/">평택시</a>
+            <a href="https://yupum.allbarunclean.com/regions/uijeongbu/">의정부시</a>
+            <a href="https://yupum.allbarunclean.com/regions/siheung/">시흥시</a>
+            <a href="https://yupum.allbarunclean.com/regions/paju/">파주시</a>
+            <a href="https://yupum.allbarunclean.com/regions/gimpo/">김포시</a>
+            <a href="https://yupum.allbarunclean.com/regions/gwangmyeong/">광명시</a>
+            <a href="https://yupum.allbarunclean.com/regions/gwangju/">광주시</a>
+            <a href="https://yupum.allbarunclean.com/regions/gunpo/">군포시</a>
+            <a href="https://yupum.allbarunclean.com/regions/osan/">오산시</a>
+            <a href="https://yupum.allbarunclean.com/regions/icheon/">이천시</a>
+            <a href="https://yupum.allbarunclean.com/regions/yangju/">양주시</a>
+            <a href="https://yupum.allbarunclean.com/regions/guri/">구리시</a>
+            <a href="https://yupum.allbarunclean.com/regions/anseong/">안성시</a>
+            <a href="https://yupum.allbarunclean.com/regions/pocheon/">포천시</a>
+            <a href="https://yupum.allbarunclean.com/regions/uiwang/">의왕시</a>
+            <a href="https://yupum.allbarunclean.com/regions/hanam/">하남시</a>
+            <a href="https://yupum.allbarunclean.com/regions/yeoju/">여주시</a>
+            <a href="https://yupum.allbarunclean.com/regions/dongducheon/">동두천시</a>
+            <a href="https://yupum.allbarunclean.com/regions/gwacheon/">과천시</a>
+            <a href="https://yupum.allbarunclean.com/regions/gapyeong/">가평군</a>
+            <a href="https://yupum.allbarunclean.com/regions/yangpyeong/">양평군</a>
+            <a href="https://yupum.allbarunclean.com/regions/yeoncheon/">연천군</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="wrap contact-box">
+      <div class="contact-info">
+        <h2>상담 접수</h2>
+        <p>
+          필요한 서비스, 지역, 연락처를 남겨주시면 확인 후 연락드립니다.
+          급한 상황이라면 전화 상담을 이용해 주세요.
+        </p>
+        <a href="tel:01043932414" class="phone-large">010-4393-2414</a>
+      </div>
+
+      <form onsubmit="return checkPrivacy();">
+        <select required>
+          <option value="">필요한 서비스를 선택하세요</option>
+          <option>유품정리</option>
+          <option>고독사청소</option>
+          <option>특수청소</option>
+          <option>폐기물처리</option>
+          <option>빈집정리</option>
+          <option>가정폐기물처리</option>
+          <option>이사폐기물처리</option>
+        </select>
+
+        <input type="text" placeholder="성함" required />
+        <input type="tel" placeholder="연락처" required />
+        <input type="text" placeholder="지역 예: 서울 강남구 / 경기 수원시" required />
+        <textarea placeholder="상담 내용을 간단히 적어주세요"></textarea>
+
+        <label class="agree">
+          <input type="checkbox" id="privacyCheck" />
+          <span>
+            개인정보 수집 및 이용에 동의합니다.
+            수집항목은 성함, 연락처, 지역, 상담내용이며 상담 및 견적 안내 목적으로만 사용됩니다.
+          </span>
+        </label>
+
+        <button type="submit">상담 신청하기</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="title">
+      <span>PRICING</span>
+      <h2>가격 가이드</h2>
+      <p>
+        아래 금액은 기본 시작 가격이며, 현장 환경과 작업 범위에 따라 달라질 수 있습니다.
+        정확한 비용은 상담 후 안내드립니다.
+      </p>
+    </div>
+
+    <div class="price-note">
+      * 부가세 별도 · 폐기물 운반비 포함
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <strong>유품정리</strong>
+        <div class="price">45만원 <span>부터~</span></div>
+        <p>고인의 유품을 정중하게 분류하고 정리합니다.</p>
+      </div>
+
+      <div class="price-card">
+        <strong>고독사 특수청소</strong>
+        <div class="price">80만원 <span>부터~</span></div>
+        <p>오염 정리, 소독, 냄새 저감 작업까지 진행합니다.</p>
+      </div>
+
+      <div class="price-card">
+        <strong>일반폐기물</strong>
+        <div class="price">30만원 <span>부터~</span></div>
+        <p>생활폐기물, 가정폐기물, 이사폐기물 반출을 도와드립니다.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="title">
+        <span>FAQ</span>
+        <h2>자주 묻는 질문</h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq">
+          <strong>Q. 서울·경기 전 지역 가능한가요?</strong>
+          <p>서울 전 지역과 경기도 주요 시·군 지역 상담이 가능합니다. 현장 위치와 일정에 따라 가능 여부를 안내드립니다.</p>
+        </div>
+
+        <div class="faq">
+          <strong>Q. 유품정리와 고독사청소도 가능한가요?</strong>
+          <p>가능합니다. 유품정리, 고독사청소, 특수청소는 유품정리 전문 사이트에서 자세히 안내할 예정입니다.</p>
+        </div>
+
+        <div class="faq">
+          <strong>Q. 폐기물처리도 같이 하나요?</strong>
+          <p>가능합니다. 빈집정리, 가정폐기물처리, 이사폐기물처리 등은 폐기물처리 전문 사이트에서 안내합니다.</p>
+        </div>
+
+        <div class="faq">
+          <strong>Q. 상담은 어떻게 진행되나요?</strong>
+          <p>전화 또는 온라인 상담 접수 후 지역, 작업 종류, 현장 상황을 확인하고 가능한 일정과 작업 범위를 안내드립니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <strong>올바른수거</strong><br />
+      서울·경기 유품정리 · 폐기물처리 전문
+    </div>
+
+    <div>
+      대표 상담 : <a href="tel:01043932414">010-4393-2414</a><br />
+      유품정리 : yupum.allbarunclean.com<br />
+      폐기물처리 : waste.allbarunclean.com
+    </div>
+  </div>
+</footer>
+
+<a href="tel:01043932414" class="floating-call">전화 상담 010-4393-2414</a>
+
+<script>
+  function checkPrivacy() {
+    const checked = document.getElementById("privacyCheck").checked;
+
+    if (!checked) {
+      alert("개인정보 수집 및 이용 동의가 필요합니다.");
+      return false;
+    }
+
+    alert("상담 신청이 확인되었습니다. 다음 단계에서 실제 메일 전송 기능을 연결합니다.");
+    return false;
+  }
+</script>
+
+</body>
+</html>
